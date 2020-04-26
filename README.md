@@ -1,3 +1,11 @@
 # WebTemplates
 
 1.Template1- HTML,CSS,BOOTSTRAP,JAVASCRIPT
+
+2.Template2- HTML,MATERIALIZE CSS,BOOTSTRAP,JAVASCRIPT
+
+3.Template3-
+
+4.Template4-
+
+5.Template5-
