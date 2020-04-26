@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Creative Page</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+     <title>MoonLight Light Parallax Effect</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div id="progressbar"></div>
     <div id="scrollPath"></div>
-    <section>
-        <h2>Creative Scroll Progress Bar</h2>
+    <section class="first">
+        <img src="images/bg.jpg" id="bg">
+        <img src="images/moon.png" id="moon">
+        <img src="images/mountain.png" id="mountain">
+        <img src="images/road.png" id="road">
+        <h2 id="text">PORTFOLIO SAMPLES</h2>
+    </section>
+
+    <section class="second">
+        <h2 style="text-align: center;">ABOUT ME!!</h2>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
@@ -30,35 +38,33 @@
     </p>
     </section>
 
-    <div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque provident animi non minus sed? Rerum dolorum velit suscipit accusamus consequuntur magni reiciendis quis labore obcaecati hic quaerat quae, ex blanditiis?
-        </p>
-    </div>
+    
 
     <script type="text/javascript">
+    let bg=document.getElementById("bg");
+    let moon=document.getElementById("moon");
+    let mountain=document.getElementById("mountain");
+    let road=document.getElementById("road");
+    let text=document.getElementById("text");
+
+    window.addEventListener('scroll',function(){
+        var value=window.scrollY;
+
+        bg.style.top=value*0.5+'px';
+        moon.style.left=-value*0.5+'px';
+        mountain.style.top=-value*0.15+'px';
+        road.style.top=-value*0.15+'px';
+        text.style.top=value*1+'px';
+    })
+
     let progress=document.getElementById('progressbar');
     let totalHeight=document.body.scrollHeight - window.innerHeight;
     window.onscroll=function(){
         let progressHeight=(window.pageYOffset/totalHeight)*100;
         progress.style.height=progressHeight + "%";
     }
+
     </script>
+    
 </body>
 </html>
