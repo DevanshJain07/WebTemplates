@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Image Opening in Style</title>
+     <link rel="stylesheet" type="text/css" href="test1.css">
+</head>
+<body>
+    <div class="banner">
+        <video autoplay="" muted="" loop="">
+            <source src="images/first.mp4" type="video/mp4">
+        </video>
+        <div id="bg"></div>
+    </div>
+    <script text="text/javascript">
+    let bg=document.querySelector("#bg");
+    window.addEventListener('scroll',function(){
+        let value=window.scrollY;
+        bg.style.backgroundSize=100+value*2+"px";
+    })
+    </script>
+</body>
+</html>
