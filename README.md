@@ -4,7 +4,7 @@
 
 2.Template2- HTML,MATERIALIZE CSS,BOOTSTRAP,JAVASCRIPT
 
-3.Template3-
+3.Template3-HTML,CSS,Vanilla JS
 
 4.Template4-
 
