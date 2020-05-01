@@ -11,8 +11,32 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a href="#" onclick="toggleModal();">Click Me</a>
-<section class="infomodal">
+    <section class="fnavbar">
+        <nav class="nav-fixed">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">CafeKing</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" onclick="toggleModal();">Home</a></li>
+                <li><a href="#" onclick="toggleModal();">About-Us</a></li>
+                <li><a href="#" onclick="toggleModal();">Coffee</a></li>
+                <li><a href="#" onclick="toggleModal();">Surprise!</a></li>
+                <li><a href="#" onclick="toggleModal();">Contact</a></li>
+              </ul>
+            </div>
+           
+          </nav>
+        
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="#" onclick="toggleModal();">Home</a></li>
+            <li><a href="#" onclick="toggleModal();">About-Us</a></li>
+            <li><a href="#" onclick="toggleModal();">Coffee</a></li>
+            <li><a href="#" onclick="toggleModal();">Surprise!</a></li>
+            <li><a href="#" onclick="toggleModal();">Contact</a></li>
+           </ul>
+    </section>
+
+    <section class="infomodal">
     <div id="modal3" class="modal">
         <div class="modal-content">
             <h4 id="info-modal-heading">
